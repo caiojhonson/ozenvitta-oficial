@@ -1,0 +1,632 @@
+/* ============================================================
+   1. HERO SECTION
+   ============================================================ */
+.hero-ozenvitta { 
+    background: radial-gradient(circle at 70% 50%, #20dfb1 0%, #1a4da2 60%, #153a7a 100%); 
+    min-height: 80vh; 
+    display: flex; 
+    align-items: center;  
+    padding: 60px 5%; 
+    color: #ffffff; 
+    overflow: hidden; 
+}
+
+.hero-ozenvitta .container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px; 
+    align-items: center; 
+}
+
+.hero-title { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    line-height: 1.2; 
+    margin-bottom: 20px; 
+}
+
+.hero-title .highlight { 
+    color: #20dfb1; 
+}
+
+.hero-description { 
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    margin-bottom: 40px; 
+    opacity: 0.9; 
+}
+
+/* Bot茫o Estilo da Imagem Principal */
+.btn-cta { 
+    display: inline-block; 
+    background: linear-gradient(90deg, #20dfb1, #1bb592); 
+    color: #153a7a; 
+    padding: 18px 35px;
+    border-radius: 50px;  
+    font-weight: 900; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 1.1rem;
+    box-shadow: 0 10px 25px rgba(32, 223, 177, 0.3); 
+    transition: transform 0.3s ease; 
+}
+
+.btn-cta:hover {
+    transform: scale(1.05);
+}
+
+
+/* ============================================================
+   2. ANIMAÇÃO IMAGEM HOME
+   ============================================================ */
+
+/* 1. Definimos a animação */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Sobe 20 pixels */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 2. Aplicamos à classe da imagem */
+.hero-image img {
+  animation: flutuar 3s ease-in-out infinite;
+  /* 3s = duração / ease-in-out = movimento suave / infinite = não para nunca */
+}
+
+
+
+
+/* ============================================================
+   2. BARRA DE BENEFICIOS (ENVIO, PAGAMENTO, FRETE)
+   ============================================================ */
+.benefits-bar {
+    background-color: #20dfb1;
+    padding: 25px 0;
+    color: #263570;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 3px solid #1ac99a;
+}
+
+.benefits-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.benefits-bar .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.benefits-bar .benefit-item:hover {
+    transform: translateY(-3px);
+}
+
+.benefits-bar .benefit-icon {
+    margin-bottom: 12px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(38, 53, 112, 0.15);
+}
+
+.benefits-bar .benefit-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: #263570;
+    stroke-width: 2;
+}
+
+.benefits-bar .benefit-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #263570;
+}
+
+.benefits-bar .benefit-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.9;
+    line-height: 1.3;
+    color: #263570;
+}
+
+/* Linhas divis贸rias entre os itens */
+.benefits-bar .benefit-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background-color: rgba(38, 53, 112, 0.2);
+}
+
+/* ============================================================
+   3. SEÇÃO COMO FUNCIONA (CARDS AZUIS)
+   ============================================================ */
+.how-it-works { 
+    background-color: #f8fafd; 
+    padding: 80px 20px; 
+    text-align: center; 
+    position: relative;
+}
+
+.how-it-works .container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    background: white; 
+    padding: 60px 40px;
+    border-radius: 40px; 
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05); 
+    position: relative;
+    z-index: 2;
+}
+
+.float-decor {
+    position: absolute;
+    z-index: 1;
+}
+
+.float-1 {
+    top: 50px;
+    left: 5%;
+    width: 100px;
+}
+
+.float-2 {
+    bottom: 50px;
+    right: 5%;
+    width: 120px;
+}
+
+.badge-emagrecer {
+    display: inline-block;
+    background: #20dfb1;
+    color: #263570;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #263570;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-title .highlight {
+    color: #20dfb1;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.benefits-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; 
+    margin-bottom: 50px; 
+}
+
+.benefit-card {
+    background: #263570;
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #20dfb1;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.card-content h3 {
+    color: #20dfb1;
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card-content p {
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   4. SEÇÃO BENEFÍCIOS TRANSFORMADOR (ÍCONES AO LADO)
+   ============================================================ */
+
+.benefits-section {
+    position: relative;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.leaf-decoration {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 120px;
+    opacity: 0.8;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-header .badge {
+    border: 2px solid #38e2b6;
+    color: #1e2d5e;
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #ffffff;
+    background-color: #3b509a; /* Cor do destaque azul no texto */
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 20px;
+}
+
+.sub-title {
+    color: #38e2b6;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Container de itens */
+.benefits-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon img {
+    max-width: 100%;
+}
+
+.benefit-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #38e2b6;
+    border-radius: 50%;
+    margin: 0 30px;
+}
+
+.benefit-label {
+    background-color: #2a3a70;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.benefit-label h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.benefit-line {
+    width: 40px;
+    height: 3px;
+    background-color: #38e2b6;
+    margin: 0 20px;
+}
+
+.benefit-description {
+    flex: 1;
+    color: #2a3a70;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefit-dot, .benefit-line {
+        display: none;
+    }
+    
+    .benefit-label {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .main-title {
+        font-size: 24px;
+    }
+    
+    
+}
+
+/* ============================================================
+   5. SEÇÃO DO BOTÃO PULSANTE
+   ============================================================ */
+.cta-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-primary-pulse {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(90deg, #20dfb1 0%, #1bc79e 100%);
+    color: #263570;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 25px rgba(32, 223, 177, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse-green 2s infinite;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary-pulse:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #1bc79e 0%, #20dfb1 100%);
+    box-shadow: 0 15px 30px rgba(32, 223, 177, 0.6);
+    animation: none;
+}
+
+.btn-primary-pulse svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary-pulse:hover svg {
+    transform: rotate(15deg) scale(1.1);
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(32, 223, 177, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(32, 223, 177, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(32, 223, 177, 0);
+    }
+}
+
+
+/* ============================================================
+   6. SEÇÃO DE PREÇOS DOS PRODUTOS
+   ============================================================ */
+
+.pricing-section {
+    padding: 80px 20px;
+    background-color: #f8fafd;
+    text-align: center; }
+
+.pricing-title {
+    font-size: 2.5rem;
+    color: #263570;
+    font-weight: 800;
+    margin-bottom: 40px; }
+
+.pricing-title .highlight {
+    color: #20dfb1; }
+
+
+
+.bonus-box h3 {
+    color: #20dfb1;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.bonus-box ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bonus-box li {
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Grid de Kits */
+.kits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kit-card {
+    background: white;
+    border: 2px solid #e1e8f0;
+    border-radius: 30px;
+    padding: 40px 25px;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.kit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.highlight-card {
+    border-color: #20dfb1;
+    background: #f0fffb;
+}
+
+.kit-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #20dfb1;
+    color: #263570;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
+.kit-image img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.kit-name {
+    color: #263570;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.kit-duration {
+    display: block;
+    background: #e6fcf7;
+    color: #263570;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.installments {
+    font-size: 1.2rem;
+    color: #263570;
+}
+
+.installments strong {
+    font-size: 2.2rem;
+    display: block;
+    color: #263570;
+}
+
+.cash-price {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.btn-buy {
+    display: block;
+    background: #20dfb1;
+    color: #263570;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background: #1bc79f;
+}
+
+.free-shipping {
+    font-size: 0.85rem;
+    color: #444;
+}
+
